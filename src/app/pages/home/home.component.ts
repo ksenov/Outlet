@@ -6,11 +6,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent {
   cols = 3;
+  category: string | undefined;
 
   constructor() { }
 
   onColumnsCountChange(colsNum: number): void {
     this.cols = colsNum;
+  }
+
+  onShowCategory(newCategory: string): void {
+    this.category = newCategory;
   }
 
 }
